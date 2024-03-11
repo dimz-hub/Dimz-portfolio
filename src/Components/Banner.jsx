@@ -63,7 +63,7 @@ else if (isDeleting && updateText === ''){
     <div  >
        <div  className='banner ' id='home' >
 
-         <div className='banner-hero w-[90%] m-[auto]' >
+         <div className='banner-hero w-[90%] m-[auto]'   >
         <TrackVisibility>
         {
          ({isVisible}) =>

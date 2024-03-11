@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useRef, } from 'react'
 import ProjectCard from './ProjectCard'
+import {useScroll, motion, useTransform} from 'framer-motion'
 
 export default function Project() {
 
@@ -44,10 +45,22 @@ const project = [
 ]
 
 
+const scrollRef = useRef(null)
+
+ const {scrollYProgress} = useScroll({
+  target: scrollRef,
+  offset:['0.1 1', '0.2 1']
+})
+
+
+
+const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1])
+const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1])
+
 
   return (
-<div className = 'project' id = 'project' >
-        <div>
+<div className = 'project' id = 'project'     >
+        <motion.div ref = {scrollRef}   style = {{ opacity: opacityProgress ,  scale: scaleProgress, transition: 'opacity 3s ease-in'}} >
         <div className=''> 
             <h2>Projects</h2>
             <p>
@@ -80,7 +93,7 @@ const project = [
 
         
         </div>
-    </div>
+    </motion.div>
     <img src = 'img/color-sharp.png' alt='color-sharp' className='background-image-left' />
     </div>
   )

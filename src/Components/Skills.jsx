@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import TrackVisibility from 'react-on-screen';
+import { motion, useTransform, useScroll} from 'framer-motion'
 
-export default function Skills() {
+
+export default function Skills({skillsRef}) {
     const responsive = {
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
@@ -21,12 +23,21 @@ export default function Skills() {
           slidesToSlide: 1, // optional, default to 1.
         },
       };
+ 
+      const scrollRef = useRef(null)
 
+      const {scrollYProgress} = useScroll({
+       target: scrollRef,
+       offset:['0.1 1', '0.2 1']
+     })
+          
+     
+     const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1])
 
   return (
     <div className = 'skill' id = 'skills' >
         <div>
-        <div className='skill-bx'>
+        <motion.div className='skill-bx' ref = {scrollRef}   style = {{ opacity: opacityProgress ,  transition: 'opacity 3s ease-in'}}>
           <TrackVisibility>
           {
             ({isVisible}) =>
@@ -82,7 +93,7 @@ responsive={responsive}
  }
       </TrackVisibility>
         
-        </div>
+        </motion.div>
     </div>
     <img src = 'img/color-sharp.png' alt='color-sharp' className='background-image-left' />
     </div>

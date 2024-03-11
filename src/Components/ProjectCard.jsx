@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function ProjectCard({title, description, imgUrl, project}) {
   return (
-    <div>
+    <div className=''>
           <Link to={project.url} target= '_blank' >
         <div  className='proj-imgbx cursor-pointer'>
 
