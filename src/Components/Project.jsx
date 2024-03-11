@@ -7,7 +7,7 @@ export default function Project() {
 const project = [
     {title: 'DimzChat',
      description: 'Bringing the world together one click at a time',
-     imgUrl: './img/dimzchat.jpg',
+     imgUrl: './img/dimzchat.JPG',
      style: 'images',
      url: 'https://dimzchat.vercel.app/'
 
