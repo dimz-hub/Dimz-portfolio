@@ -7,38 +7,38 @@ export default function Project() {
 const project = [
     {title: 'DimzChat',
      description: 'Bringing the world together one click at a time',
-     imgUrl: 'img/dimzchat.jpg',
+     imgUrl: './img/dimzchat.jpg',
      style: 'images',
      url: 'https://dimzchat.vercel.app/'
 
 },
     {title: 'BirchCare',
      description: 'Domiciliary care',
-     imgUrl: 'img/birch.jpg',
+     imgUrl: './img/birch.JPG',
      style: 'images',
      url: 'https://www.joinbirchcare.com/'
 
 },
     {title: 'Youtube Clone',
      description: 'watch the world happen',
-     imgUrl: 'img/youtube-clone.jpg',
+     imgUrl: './img/youtube-clone.jpg',
      style: 'images',
      url: 'https://youtube-clone-ruddy-seven.vercel.app/'
 },
     {title: 'Oye Autos',
      description: 'Car and car parts dealership',
-     imgUrl: 'img/oyeAutos.jpg',
+     imgUrl: './img/oyeAutos.JPG',
      style: 'images',
      url: 'https://car-dealership-website.vercel.app/'
 },
     {title: 'Tetris for PC',
      description: 'Get your fun on with tetris',
-     imgUrl: 'img/tetris.jpg',
+     imgUrl: './img/tetris.JPG',
      url: 'https://tetris-game-iota.vercel.app/'
 },
     {title: 'eaziPay.jpg',
      description: 'Easy pay',
-     imgUrl: 'img/eazipay.jpg',
+     imgUrl: './img/eazipay.JPG',
      style: 'images',
      url: 'https://eazipay-psi.vercel.app/'
 },
