@@ -7,12 +7,12 @@ export default function PhotoGallery({}) {
 
  const {scrollYProgress} = useScroll({
   target: scrollRef,
-  offset:['0.1 1', '0.2 1']
+  offset:['0.1 1', '0.15 1']
 })
      
 
 const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1])
-const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1])
+const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1])
 
 
   return (

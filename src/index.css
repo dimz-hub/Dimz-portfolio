@@ -446,3 +446,29 @@ width: 400px;
     }
   }
 
+  .icon{
+    /* color: white; */
+  }
+
+  .icon:hover{
+    color: #121212;
+  }
+
+  @media (max-width: 750px) {
+
+    
+    .nav-lin{
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .scrolled {
+
+      padding:0px 0;
+      background-color: transparent;
+    }
+
+    .nav-top{
+        background-color: #121212;
+          padding:10px 0;
+      
+    }
+  }

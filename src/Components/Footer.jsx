@@ -14,7 +14,7 @@ export default function Footer() {
     const currentYear = currrentDate.getFullYear()
 
   return (
-    <div className='footer '>
+    <div className='footer' id='footer'>
        <div>
         <div className='flex flex-col gap-[15px] justify-center items-center'>
             <div className='text-[30px] font-[700]'>

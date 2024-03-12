@@ -1,4 +1,4 @@
-import React , {useEffect, useRef} from 'react'
+import React , {useEffect, useRef,useState} from 'react'
 import Navbar from './Navbar'
 import Banner from './Banner'
 import Skills from './Skills'
@@ -69,11 +69,15 @@ export default function LandingPage() {
       });
     };
 
+    const [clicked, setClicked] = useState(false)
         
 
   return (
     <div>
-        <Navbar/>
+      <div className={clicked? 'xs:mb-[130px]' : ''} >
+
+        <Navbar clicked = {clicked} setClicked ={setClicked} />
+      </div>
         <Banner     />
         <Skills />
         <PhotoGallery />
