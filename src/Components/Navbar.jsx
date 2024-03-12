@@ -33,7 +33,7 @@ export default function Navbar({clicked, setClicked}) {
 
   return (
     <div  className= {scrolled ? ' navbar scrolled' : 'navbar'}>
-    <div className = 'w-[90%] m-[auto]  flex items-center justify-between  xs:block xs:w-[100%] xs:mb-[100px]'>
+    <div className = 'w-[90%] m-[auto]  flex items-center justify-between  xs:block xs:w-[100%] xs:pb-[100px]'>
          <div className='nav-top' >
                <div className='xs:w-[90%] brand xs:flex xs:items-center xs:justify-between xs:m-[auto] '>
 
